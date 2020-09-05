@@ -6,9 +6,10 @@ float playerX = (float)350;
 float playerY = (float)700;
 int health = 50;
 int points = 0;
-boolean[] keys;;
+boolean[] keys;
 
 void setup() {
+  
   size(800, 800);
   background(0);
   frameRate(100);
@@ -120,9 +121,9 @@ class Score {
   
   void display() {
     fill(255);
-    textSize(20);
-    text("HP: " + health, 0, 20);
-    text("Points: " + points, 0, 40);
+    textSize(30);
+    text("HP: " + health, 0, 30);
+    text("Points: " + points, 0, 60);
   }
   
   void gameOver() {
