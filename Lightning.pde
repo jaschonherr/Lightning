@@ -26,5 +26,5 @@ void draw() {
     //bolt.checkTouching();
     //bolt.display();
     //score.display();
-  }
+  //}
 }
