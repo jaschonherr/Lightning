@@ -1,6 +1,6 @@
-Bolt bolt;
-Player player;
-Score score;
+//Bolt bolt;
+//Player player;
+//Score score;
 float size = 100;
 float playerX = 350;
 float playerY = 700;
@@ -27,12 +27,4 @@ void draw() {
     //bolt.display();
     //score.display();
   }
-}
-
-void keyPressed() {
-  keys[key] = true;
-}
-
-void keyReleased() {
-  keys[key] = false;
 }
