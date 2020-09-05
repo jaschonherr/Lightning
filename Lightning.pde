@@ -6,7 +6,7 @@ float playerX = (float)350;
 float playerY = (float)700;
 int health = 50;
 int points = 0;
-boolean[] keys = new boolean[128];
+//boolean[] keys = new boolean[128];
 
 void setup() {
   size(800, 800);
