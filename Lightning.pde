@@ -123,6 +123,7 @@ class Score {
   void display() {
     fill(255);
     textSize(30);
+    textAlign(LEFT);
     text("HP: " + health, 0, 30);
     text("Points: " + points, 0, 60);
   }
