@@ -6,7 +6,7 @@ float playerX = (float)350;
 float playerY = (float)700;
 int health = 50;
 int points = 0;
-boolean[] keys;
+boolean[] keys;;
 
 void setup() {
   
@@ -98,9 +98,9 @@ int endY;
       fill(0);
       rect(0, 0, width, height - playerSize);
       rect(endX - 100, height - playerSize, 200, 100);
-      startX = random(150, width - playerSize);
+      startX = (int)((Math.random() * (width-150) + 120));
       startY = 0;
-      endX = random(150, width - playerSize);
+      endX = (int)((Math.random() * (width-150) + 120));
       endY = 0;
     
     }
@@ -134,3 +134,4 @@ class Score {
     text("Your score: " + points, 5, 130);
   }
 }
+
