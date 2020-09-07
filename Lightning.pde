@@ -10,7 +10,8 @@ float startX;
 int startY;
 float endX;
 int endY; 
-boolean[] keys;;
+boolean[] keys;
+boolean start = false;
 
 void setup() {
   
@@ -24,15 +25,27 @@ void setup() {
 }
 
 void draw() {
-  if(health <= 0){
-    score.gameOver();
+  if(start == false) {
+    textSize(60);
+    fill(255);
+    textAlign(CENTER);
+    text("Press 's' to start", width/2, height/2 - 100);
+    if(keys['s']) {
+        start = true;
+        background(0);
+    }
   } else {
-    player.move();
-    player.display();
-    bolt.checkTouching();
-    bolt.display();
-    score.display();
+      if(health <= 0){
+      score.gameOver();
+  } else {
+      player.move();
+      player.display();
+      bolt.checkTouching();
+      bolt.display();
+      score.display();
   }
+  }
+  
 }
 
 void keyPressed() {
@@ -147,4 +160,3 @@ class Score {
       }
   }
 }
-
