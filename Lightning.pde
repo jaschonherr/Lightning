@@ -6,6 +6,10 @@ float playerX = (float)350;
 float playerY = (float)700;
 int health = 50;
 int points = 0;
+float startX;
+int startY;
+float endX;
+int endY; 
 boolean[] keys;;
 
 void setup() {
@@ -69,10 +73,7 @@ class Player {
 
 class Bolt {
 
-float startX;
-int startY;
-float endX;
-int endY; 
+
 
   Bolt() {
     startX = width/2;
@@ -130,8 +131,19 @@ class Score {
     background(0);
     textSize(60);
     fill(255, 0, 0);
-    text("GAME OVER", 5, 60);
-    text("Your score: " + points, 5, 130);
+    textAlign(CENTER);
+    text("GAME OVER", width/2, 60);
+    text("Your score: " + points, width/2, 130);
+    text("Press 'r' to try again", width/2, 200);
+    if(keys['r']) {
+        background(0);
+        health = 50;
+        points = 0;
+        startX = width/2;
+        startY = 0;
+        endX = width/2;
+        endY = 0;
+      }
   }
 }
 
